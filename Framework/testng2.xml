@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="All smoke tests">
+	<test name="Smoke test cases">
+	<!-- the below are run at the package level, so test suite in this example -->
+	<packages>
+		<package name="testngFiles" />
+		<package name="testngFiles2" />
+	</packages>
+	</test>
+</suite>

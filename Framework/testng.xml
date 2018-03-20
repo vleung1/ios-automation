@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="All smoke tests">
+	<test name="Smoke test cases">
+	<!-- the below are run at the class level, so test cases in this example -->
+	<classes>
+		<class name="testngFiles.Annotations2" />
+		<class name="testngFiles.Annotations" />
+	</classes>
+	</test>
+</suite>
