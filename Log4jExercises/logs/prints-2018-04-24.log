@@ -1,0 +1,8 @@
+20:04:59.952 [main] ERROR alpha.Demo - This is a error message
+20:04:59.954 [main] FATAL alpha.Demo - This is a fatal message
+20:24:56.324 [main] ERROR alpha.Demo - This is a error message
+20:24:56.326 [main] FATAL alpha.Demo - This is a fatal message
+20:25:12.005 [main] ERROR alpha.Demo - This is a error message
+20:25:12.007 [main] FATAL alpha.Demo - This is a fatal message
+20:25:20.634 [main] ERROR alpha.Demo - This is a error message
+20:25:20.636 [main] FATAL alpha.Demo - This is a fatal message
