@@ -49,7 +49,7 @@ public class ExcelGmailLoginDemo {
 		driver.get("http://gmail.com");
 		driver.findElement(By.xpath("//*[@id='identifierId']")).sendKeys(username);
 		driver.findElement(By.id("identifierNext")).click();
-		//Actions needed to be used because password field element could not be found when running in Safari
+		// Actions needed to be used because password field element could not be found when running in Safari
 		//driver.findElement(By.name("password")).sendKeys(password);
 		actions.moveToElement(driver.findElement(By.name("password"))).click().sendKeys(password).build().perform();
 		actions.moveToElement(driver.findElement(By.name("password"))).click().sendKeys(Keys.ENTER).build().perform();
