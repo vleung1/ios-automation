@@ -11,6 +11,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -32,19 +34,26 @@ public class ExcelGmailLoginDemo {
 		if (browser.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "//Users//Vince//Downloads//geckodriver");
 			driver = new FirefoxDriver();
+		} if (browser.equals("safari")) {
+			System.setProperty("webdriver.safari.driver", "//usr//bin//safaridriver");
+			driver = new SafariDriver();
 		} else if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "//Users//Vince//Downloads//chromedriver");
 			driver = new ChromeDriver();
 		}
-		
+		Actions actions = new Actions(driver);
+
 		//the test: log into gmail 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://gmail.com");
 		driver.findElement(By.xpath("//*[@id='identifierId']")).sendKeys(username);
 		driver.findElement(By.id("identifierNext")).click();
-		driver.findElement(By.name("password")).sendKeys(password);
-		driver.findElement(By.name("password")).sendKeys(Keys.ENTER);
+		//Actions needed to be used because password field element could not be found when running in Safari
+		//driver.findElement(By.name("password")).sendKeys(password);
+		actions.moveToElement(driver.findElement(By.name("password"))).click().sendKeys(password).build().perform();
+		actions.moveToElement(driver.findElement(By.name("password"))).click().sendKeys(Keys.ENTER).build().perform();
+		//driver.findElement(By.name("password")).sendKeys(Keys.ENTER);
 		driver.quit();
 	}
 
