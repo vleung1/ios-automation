@@ -1,0 +1,1 @@
+Maven exercises using build profiles
