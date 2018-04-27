@@ -1,1 +1,1 @@
-Maven setup exercises using build profiles
+Maven exercises using build profiles
