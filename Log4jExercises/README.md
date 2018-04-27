@@ -1,0 +1,1 @@
+Log4j exercises using Log4j 2 and config file setup, outputting to console and file
