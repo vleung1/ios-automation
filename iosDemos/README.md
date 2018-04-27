@@ -1,0 +1,1 @@
+iOS automation on emulator using Appium UICatalog app and mobile Safari browser
